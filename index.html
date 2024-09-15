@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *
+            {
+                font-family: "Helvetica Neue", sans-serif;
+            }
+        
+            body {
+                background-color: #8bc6ec;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            div {
+            border-radius: 5px;
+            width: 350px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            }
+            input[type=text]  {
+            width: 49%;
+            padding: 5px 10px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            border-color: #01416b;
+            box-sizing: border-box;
+            text-align: center;
+            }
+        
+        
+            button {
+                background: #ff9501;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                border: none;
+                border-radius: 10%;
+                cursor: pointer;
+                height: 35px;
+                width: 84px;
+            }
+            
+            button:hover {
+                filter: brightness(120%);
+            }
+            button:active,
+            button:focus {
+                filter: brightness(120%);
+            }
+            
+            .antet {
+                background-color: #01416b;
+                width: 340px;
+                margin-top: 5px;
+                padding: 5px;
+                height: 25px;
+            }
+            .antet p {
+                margin-top: 3px;
+                width: 100%;
+                font-size: 16px;
+                text-align: center;
+                font-weight: bold;
+                background: transparent;
+                color: #fff;
+                border: none;
+                outline: none;
+        
+            }
+        
+            .mesaj {
+                background-color: #8bc6ec;
+                width: 340px;
+                margin-top: 5px;
+                padding: 5px;
+                height: 25px;
+                
+            }
+            
+            .inputOK {
+                background-color: #49ac75;
+            }
+        
+            .eroareInput {
+                background-color: #ff4d4d;
+            }
+        
+        
+            .mesaj p {
+                margin-top: 3px;
+                width: 100%;
+                font-size: 16px;
+                background: transparent;
+                color: #fff;
+                border: none;
+                outline: none;
+        
+            }
+        
+    </style>
+</head>
+
+
+<body>
+
+<div>    
+    <div class="antet">
+         <p>MINI CALCULATOR </p>
+    </div>  
+    <form>
+        <input type="text" id="nr1" name="nr1" placeholder="Primul numar" onkeyup="validareInputNr1()">
+        <input type="text" id="nr2" name="nr2" placeholder="Al doilea numar" onkeyup="validareInputNr2()">
+        <button type="button" onclick="adunare()">Adunare</button>
+        <button type="button" onclick="scadere()">Scădere</button>
+        <button type="button" onclick="inmultire()">Înmulțire</button>
+        <button type="button" onclick="impartire()">Împărțire</button>
+        <div class="mesaj" id="divMesaj">
+            <p name="mesaj" id="mesaj">Mesaj </p>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
